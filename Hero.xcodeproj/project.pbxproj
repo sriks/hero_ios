@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0E20F31B25959A00B7A06B /* HRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E20F21B25959A00B7A06B /* HRHomeViewController.m */; };
+		AD0E20F51B25D5C200B7A06B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0E20F41B25D5C200B7A06B /* Home.storyboard */; };
+		AD0E20F81B25E9A700B7A06B /* HRWhereAreYouTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E20F71B25E9A700B7A06B /* HRWhereAreYouTVC.m */; };
+		AD0E20FF1B271E4C00B7A06B /* HRLocationDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E20FE1B271E4C00B7A06B /* HRLocationDetailsVC.m */; };
+		AD0E21031B28889600B7A06B /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0E21021B28889600B7A06B /* LocationDetails.storyboard */; };
+		AD0E21051B288FF600B7A06B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0E21041B288FF600B7A06B /* MapKit.framework */; };
+		AD0E210D1B28A6F300B7A06B /* HRGroupMemberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E210C1B28A6F300B7A06B /* HRGroupMemberModel.m */; };
+		AD0E21101B28A7DA00B7A06B /* HRParseServer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E210F1B28A7DA00B7A06B /* HRParseServer.m */; };
+		AD0E21141B28ABC000B7A06B /* HRServerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E21131B28ABC000B7A06B /* HRServerConstants.m */; };
+		AD0E21181B28ADA700B7A06B /* NSArray+ParseConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E21171B28ADA700B7A06B /* NSArray+ParseConversions.m */; };
+		AD0E211B1B29EA3400B7A06B /* HRServerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E211A1B29EA3400B7A06B /* HRServerUtils.m */; };
+		AD0E21241B2C057600B7A06B /* HRServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E21231B2C057600B7A06B /* HRServerManager.m */; };
+		AD0E21281B2C852B00B7A06B /* HRWhereAreYouResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E21271B2C852B00B7A06B /* HRWhereAreYouResponse.m */; };
+		AD0E212C1B2C86BE00B7A06B /* HRWhereAreYouResponse+ParseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E212B1B2C86BE00B7A06B /* HRWhereAreYouResponse+ParseObject.m */; };
+		AD0E21311B2DB98000B7A06B /* HRHomeNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E21301B2DB98000B7A06B /* HRHomeNavigation.m */; };
+		AD276BE91B34313300B5E898 /* HRLocationVisits.m in Sources */ = {isa = PBXBuildFile; fileRef = AD276BE81B34313300B5E898 /* HRLocationVisits.m */; };
 		AD79BA4F1B20B78A00E8DF61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD79BA4E1B20B78A00E8DF61 /* main.m */; };
 		AD79BA521B20B78A00E8DF61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD79BA511B20B78A00E8DF61 /* AppDelegate.m */; };
 		AD79BA551B20B78A00E8DF61 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD79BA541B20B78A00E8DF61 /* FirstViewController.m */; };
@@ -14,20 +30,56 @@
 		AD79BA5B1B20B78A00E8DF61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD79BA591B20B78A00E8DF61 /* Main.storyboard */; };
 		AD79BA5D1B20B78B00E8DF61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD79BA5C1B20B78B00E8DF61 /* Images.xcassets */; };
 		AD79BA601B20B78B00E8DF61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD79BA5E1B20B78B00E8DF61 /* LaunchScreen.xib */; };
-		AD79BA6C1B20B78B00E8DF61 /* HeroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD79BA6B1B20B78B00E8DF61 /* HeroTests.m */; };
+		AD79BA771B20CB8000E8DF61 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA751B20CB8000E8DF61 /* Parse.framework */; };
+		AD79BA781B20CB8000E8DF61 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA761B20CB8000E8DF61 /* ParseCrashReporting.framework */; };
+		AD79BA7A1B20CC2300E8DF61 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA791B20CC2200E8DF61 /* AudioToolbox.framework */; };
+		AD79BA7C1B20CC2B00E8DF61 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA7B1B20CC2B00E8DF61 /* CFNetwork.framework */; };
+		AD79BA7E1B20CC3400E8DF61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA7D1B20CC3400E8DF61 /* CoreGraphics.framework */; };
+		AD79BA801B20CC3A00E8DF61 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA7F1B20CC3A00E8DF61 /* CoreLocation.framework */; };
+		AD79BA821B20CC4200E8DF61 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA811B20CC4200E8DF61 /* MobileCoreServices.framework */; };
+		AD79BA841B20CC4A00E8DF61 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA831B20CC4A00E8DF61 /* QuartzCore.framework */; };
+		AD79BA861B20CC5200E8DF61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA851B20CC5200E8DF61 /* Security.framework */; };
+		AD79BA881B20CC5B00E8DF61 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA871B20CC5B00E8DF61 /* StoreKit.framework */; };
+		AD79BA8A1B20CC6200E8DF61 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA891B20CC6200E8DF61 /* SystemConfiguration.framework */; };
+		AD79BA8C1B20CC7100E8DF61 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA8B1B20CC7100E8DF61 /* libz.dylib */; };
+		AD79BA8E1B20CC7900E8DF61 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA8D1B20CC7900E8DF61 /* libsqlite3.dylib */; };
+		AD79BA901B20CCF500E8DF61 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA8F1B20CCF500E8DF61 /* Bolts.framework */; };
+		ADF4725F1B2EED5700B1A039 /* HRReverseGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF4725E1B2EED5700B1A039 /* HRReverseGeocoder.m */; };
+		ADF472621B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF472611B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		AD79BA661B20B78B00E8DF61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AD79BA411B20B78A00E8DF61 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AD79BA481B20B78A00E8DF61;
-			remoteInfo = Hero;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		AD0E20F11B25959A00B7A06B /* HRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRHomeViewController.h; sourceTree = "<group>"; };
+		AD0E20F21B25959A00B7A06B /* HRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRHomeViewController.m; sourceTree = "<group>"; };
+		AD0E20F41B25D5C200B7A06B /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		AD0E20F61B25E9A700B7A06B /* HRWhereAreYouTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRWhereAreYouTVC.h; sourceTree = "<group>"; };
+		AD0E20F71B25E9A700B7A06B /* HRWhereAreYouTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRWhereAreYouTVC.m; sourceTree = "<group>"; };
+		AD0E20FD1B271E4C00B7A06B /* HRLocationDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRLocationDetailsVC.h; sourceTree = "<group>"; };
+		AD0E20FE1B271E4C00B7A06B /* HRLocationDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRLocationDetailsVC.m; sourceTree = "<group>"; };
+		AD0E21021B28889600B7A06B /* LocationDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
+		AD0E21041B288FF600B7A06B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AD0E210B1B28A6F300B7A06B /* HRGroupMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRGroupMemberModel.h; sourceTree = "<group>"; };
+		AD0E210C1B28A6F300B7A06B /* HRGroupMemberModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRGroupMemberModel.m; sourceTree = "<group>"; };
+		AD0E210E1B28A7DA00B7A06B /* HRParseServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRParseServer.h; sourceTree = "<group>"; };
+		AD0E210F1B28A7DA00B7A06B /* HRParseServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRParseServer.m; sourceTree = "<group>"; };
+		AD0E21121B28ABC000B7A06B /* HRServerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRServerConstants.h; sourceTree = "<group>"; };
+		AD0E21131B28ABC000B7A06B /* HRServerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRServerConstants.m; sourceTree = "<group>"; };
+		AD0E21161B28ADA700B7A06B /* NSArray+ParseConversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ParseConversions.h"; sourceTree = "<group>"; };
+		AD0E21171B28ADA700B7A06B /* NSArray+ParseConversions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ParseConversions.m"; sourceTree = "<group>"; };
+		AD0E21191B29EA3400B7A06B /* HRServerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRServerUtils.h; sourceTree = "<group>"; };
+		AD0E211A1B29EA3400B7A06B /* HRServerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRServerUtils.m; sourceTree = "<group>"; };
+		AD0E21211B2C021C00B7A06B /* HRServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRServer.h; sourceTree = "<group>"; };
+		AD0E21221B2C057600B7A06B /* HRServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRServerManager.h; sourceTree = "<group>"; };
+		AD0E21231B2C057600B7A06B /* HRServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRServerManager.m; sourceTree = "<group>"; };
+		AD0E21251B2C071200B7A06B /* HRServerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRServerProtocol.h; sourceTree = "<group>"; };
+		AD0E21261B2C852B00B7A06B /* HRWhereAreYouResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRWhereAreYouResponse.h; sourceTree = "<group>"; };
+		AD0E21271B2C852B00B7A06B /* HRWhereAreYouResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRWhereAreYouResponse.m; sourceTree = "<group>"; };
+		AD0E212A1B2C86BE00B7A06B /* HRWhereAreYouResponse+ParseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HRWhereAreYouResponse+ParseObject.h"; sourceTree = "<group>"; };
+		AD0E212B1B2C86BE00B7A06B /* HRWhereAreYouResponse+ParseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HRWhereAreYouResponse+ParseObject.m"; sourceTree = "<group>"; };
+		AD0E212F1B2DB98000B7A06B /* HRHomeNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRHomeNavigation.h; sourceTree = "<group>"; };
+		AD0E21301B2DB98000B7A06B /* HRHomeNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRHomeNavigation.m; sourceTree = "<group>"; };
+		AD276BE71B34313300B5E898 /* HRLocationVisits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRLocationVisits.h; sourceTree = "<group>"; };
+		AD276BE81B34313300B5E898 /* HRLocationVisits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRLocationVisits.m; sourceTree = "<group>"; };
 		AD79BA491B20B78A00E8DF61 /* Hero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD79BA4D1B20B78A00E8DF61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD79BA4E1B20B78A00E8DF61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,9 +92,26 @@
 		AD79BA5A1B20B78A00E8DF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD79BA5C1B20B78B00E8DF61 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AD79BA5F1B20B78B00E8DF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		AD79BA651B20B78B00E8DF61 /* HeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD79BA6A1B20B78B00E8DF61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD79BA6B1B20B78B00E8DF61 /* HeroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroTests.m; sourceTree = "<group>"; };
+		AD79BA751B20CB8000E8DF61 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		AD79BA761B20CB8000E8DF61 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		AD79BA791B20CC2200E8DF61 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AD79BA7B1B20CC2B00E8DF61 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AD79BA7D1B20CC3400E8DF61 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AD79BA7F1B20CC3A00E8DF61 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AD79BA811B20CC4200E8DF61 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		AD79BA831B20CC4A00E8DF61 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AD79BA851B20CC5200E8DF61 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AD79BA871B20CC5B00E8DF61 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		AD79BA891B20CC6200E8DF61 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AD79BA8B1B20CC7100E8DF61 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		AD79BA8D1B20CC7900E8DF61 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AD79BA8F1B20CCF500E8DF61 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../../Downloads/parse-library-1-2/Bolts.framework"; sourceTree = "<group>"; };
+		ADF4725D1B2EED5700B1A039 /* HRReverseGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRReverseGeocoder.h; sourceTree = "<group>"; };
+		ADF4725E1B2EED5700B1A039 /* HRReverseGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRReverseGeocoder.m; sourceTree = "<group>"; };
+		ADF472601B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRWhereAreYouResponseTVC.h; sourceTree = "<group>"; };
+		ADF472611B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRWhereAreYouResponseTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,22 +119,155 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD79BA621B20B78B00E8DF61 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				AD0E21051B288FF600B7A06B /* MapKit.framework in Frameworks */,
+				AD79BA8E1B20CC7900E8DF61 /* libsqlite3.dylib in Frameworks */,
+				AD79BA8C1B20CC7100E8DF61 /* libz.dylib in Frameworks */,
+				AD79BA8A1B20CC6200E8DF61 /* SystemConfiguration.framework in Frameworks */,
+				AD79BA881B20CC5B00E8DF61 /* StoreKit.framework in Frameworks */,
+				AD79BA861B20CC5200E8DF61 /* Security.framework in Frameworks */,
+				AD79BA841B20CC4A00E8DF61 /* QuartzCore.framework in Frameworks */,
+				AD79BA821B20CC4200E8DF61 /* MobileCoreServices.framework in Frameworks */,
+				AD79BA801B20CC3A00E8DF61 /* CoreLocation.framework in Frameworks */,
+				AD79BA7E1B20CC3400E8DF61 /* CoreGraphics.framework in Frameworks */,
+				AD79BA7C1B20CC2B00E8DF61 /* CFNetwork.framework in Frameworks */,
+				AD79BA7A1B20CC2300E8DF61 /* AudioToolbox.framework in Frameworks */,
+				AD79BA771B20CB8000E8DF61 /* Parse.framework in Frameworks */,
+				AD79BA781B20CB8000E8DF61 /* ParseCrashReporting.framework in Frameworks */,
+				AD79BA901B20CCF500E8DF61 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD0E20EA1B25940A00B7A06B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AD79BA591B20B78A00E8DF61 /* Main.storyboard */,
+				AD0E20F41B25D5C200B7A06B /* Home.storyboard */,
+				AD0E21021B28889600B7A06B /* LocationDetails.storyboard */,
+			);
+			name = Storyboards;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		AD0E20ED1B25950F00B7A06B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AD0E212E1B2DB96700B7A06B /* Navigation */,
+				AD0E20F01B25953C00B7A06B /* ViewControllers */,
+				AD0E20EA1B25940A00B7A06B /* Storyboards */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AD0E20F01B25953C00B7A06B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD0E20F11B25959A00B7A06B /* HRHomeViewController.h */,
+				AD0E20F21B25959A00B7A06B /* HRHomeViewController.m */,
+				AD0E20F61B25E9A700B7A06B /* HRWhereAreYouTVC.h */,
+				AD0E20F71B25E9A700B7A06B /* HRWhereAreYouTVC.m */,
+				AD0E20FD1B271E4C00B7A06B /* HRLocationDetailsVC.h */,
+				AD0E20FE1B271E4C00B7A06B /* HRLocationDetailsVC.m */,
+				ADF472601B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.h */,
+				ADF472611B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AD0E20F91B25EEB000B7A06B /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				ADF4725C1B2EED2A00B1A039 /* ReverseGeocoder */,
+				AD0E21151B28AD4D00B7A06B /* Parse */,
+				AD0E21061B28A65C00B7A06B /* Models */,
+				AD0E21111B28AB4300B7A06B /* Common */,
+				AD0E21211B2C021C00B7A06B /* HRServer.h */,
+				AD0E21221B2C057600B7A06B /* HRServerManager.h */,
+				AD0E21231B2C057600B7A06B /* HRServerManager.m */,
+				AD0E21251B2C071200B7A06B /* HRServerProtocol.h */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		AD0E21061B28A65C00B7A06B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD0E210B1B28A6F300B7A06B /* HRGroupMemberModel.h */,
+				AD0E210C1B28A6F300B7A06B /* HRGroupMemberModel.m */,
+				AD0E21261B2C852B00B7A06B /* HRWhereAreYouResponse.h */,
+				AD0E21271B2C852B00B7A06B /* HRWhereAreYouResponse.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AD0E210A1B28A6CD00B7A06B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AD276BE61B34311D00B5E898 /* Location */,
+				AD0E20F91B25EEB000B7A06B /* Server */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AD0E21111B28AB4300B7A06B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AD0E21121B28ABC000B7A06B /* HRServerConstants.h */,
+				AD0E21131B28ABC000B7A06B /* HRServerConstants.m */,
+				AD0E21191B29EA3400B7A06B /* HRServerUtils.h */,
+				AD0E211A1B29EA3400B7A06B /* HRServerUtils.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		AD0E21151B28AD4D00B7A06B /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				AD0E210E1B28A7DA00B7A06B /* HRParseServer.h */,
+				AD0E210F1B28A7DA00B7A06B /* HRParseServer.m */,
+				AD0E21161B28ADA700B7A06B /* NSArray+ParseConversions.h */,
+				AD0E21171B28ADA700B7A06B /* NSArray+ParseConversions.m */,
+				AD0E212A1B2C86BE00B7A06B /* HRWhereAreYouResponse+ParseObject.h */,
+				AD0E212B1B2C86BE00B7A06B /* HRWhereAreYouResponse+ParseObject.m */,
+			);
+			name = Parse;
+			sourceTree = "<group>";
+		};
+		AD0E212E1B2DB96700B7A06B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AD0E212F1B2DB98000B7A06B /* HRHomeNavigation.h */,
+				AD0E21301B2DB98000B7A06B /* HRHomeNavigation.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		AD276BE61B34311D00B5E898 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				AD276BE71B34313300B5E898 /* HRLocationVisits.h */,
+				AD276BE81B34313300B5E898 /* HRLocationVisits.m */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
 		AD79BA401B20B78A00E8DF61 = {
 			isa = PBXGroup;
 			children = (
+				AD0E21041B288FF600B7A06B /* MapKit.framework */,
+				AD79BA8D1B20CC7900E8DF61 /* libsqlite3.dylib */,
+				AD79BA8B1B20CC7100E8DF61 /* libz.dylib */,
+				AD79BA891B20CC6200E8DF61 /* SystemConfiguration.framework */,
+				AD79BA871B20CC5B00E8DF61 /* StoreKit.framework */,
+				AD79BA851B20CC5200E8DF61 /* Security.framework */,
+				AD79BA831B20CC4A00E8DF61 /* QuartzCore.framework */,
+				AD79BA811B20CC4200E8DF61 /* MobileCoreServices.framework */,
+				AD79BA7F1B20CC3A00E8DF61 /* CoreLocation.framework */,
+				AD79BA7D1B20CC3400E8DF61 /* CoreGraphics.framework */,
+				AD79BA7B1B20CC2B00E8DF61 /* CFNetwork.framework */,
+				AD79BA791B20CC2200E8DF61 /* AudioToolbox.framework */,
 				AD79BA4B1B20B78A00E8DF61 /* Hero */,
 				AD79BA681B20B78B00E8DF61 /* HeroTests */,
 				AD79BA4A1B20B78A00E8DF61 /* Products */,
@@ -76,7 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				AD79BA491B20B78A00E8DF61 /* Hero.app */,
-				AD79BA651B20B78B00E8DF61 /* HeroTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,13 +287,17 @@
 			children = (
 				AD79BA501B20B78A00E8DF61 /* AppDelegate.h */,
 				AD79BA511B20B78A00E8DF61 /* AppDelegate.m */,
+				AD0E210A1B28A6CD00B7A06B /* Core */,
+				AD0E20ED1B25950F00B7A06B /* UI */,
 				AD79BA531B20B78A00E8DF61 /* FirstViewController.h */,
 				AD79BA541B20B78A00E8DF61 /* FirstViewController.m */,
 				AD79BA561B20B78A00E8DF61 /* SecondViewController.h */,
 				AD79BA571B20B78A00E8DF61 /* SecondViewController.m */,
-				AD79BA591B20B78A00E8DF61 /* Main.storyboard */,
 				AD79BA5C1B20B78B00E8DF61 /* Images.xcassets */,
 				AD79BA5E1B20B78B00E8DF61 /* LaunchScreen.xib */,
+				AD79BA8F1B20CCF500E8DF61 /* Bolts.framework */,
+				AD79BA751B20CB8000E8DF61 /* Parse.framework */,
+				AD79BA761B20CB8000E8DF61 /* ParseCrashReporting.framework */,
 				AD79BA4C1B20B78A00E8DF61 /* Supporting Files */,
 			);
 			path = Hero;
@@ -124,6 +329,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		ADF4725C1B2EED2A00B1A039 /* ReverseGeocoder */ = {
+			isa = PBXGroup;
+			children = (
+				ADF4725D1B2EED5700B1A039 /* HRReverseGeocoder.h */,
+				ADF4725E1B2EED5700B1A039 /* HRReverseGeocoder.m */,
+			);
+			name = ReverseGeocoder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,24 +358,6 @@
 			productReference = AD79BA491B20B78A00E8DF61 /* Hero.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AD79BA641B20B78B00E8DF61 /* HeroTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AD79BA721B20B78B00E8DF61 /* Build configuration list for PBXNativeTarget "HeroTests" */;
-			buildPhases = (
-				AD79BA611B20B78B00E8DF61 /* Sources */,
-				AD79BA621B20B78B00E8DF61 /* Frameworks */,
-				AD79BA631B20B78B00E8DF61 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AD79BA671B20B78B00E8DF61 /* PBXTargetDependency */,
-			);
-			name = HeroTests;
-			productName = HeroTests;
-			productReference = AD79BA651B20B78B00E8DF61 /* HeroTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -173,10 +369,12 @@
 				TargetAttributes = {
 					AD79BA481B20B78A00E8DF61 = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					AD79BA641B20B78B00E8DF61 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = AD79BA481B20B78A00E8DF61;
+						DevelopmentTeam = 2E8VMJTP9D;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -194,7 +392,6 @@
 			projectRoot = "";
 			targets = (
 				AD79BA481B20B78A00E8DF61 /* Hero */,
-				AD79BA641B20B78B00E8DF61 /* HeroTests */,
 			);
 		};
 /* End PBXProject section */
@@ -204,16 +401,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD0E21031B28889600B7A06B /* LocationDetails.storyboard in Resources */,
 				AD79BA5B1B20B78A00E8DF61 /* Main.storyboard in Resources */,
 				AD79BA601B20B78B00E8DF61 /* LaunchScreen.xib in Resources */,
 				AD79BA5D1B20B78B00E8DF61 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD79BA631B20B78B00E8DF61 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				AD0E20F51B25D5C200B7A06B /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,30 +416,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD0E21311B2DB98000B7A06B /* HRHomeNavigation.m in Sources */,
+				AD0E211B1B29EA3400B7A06B /* HRServerUtils.m in Sources */,
+				AD0E212C1B2C86BE00B7A06B /* HRWhereAreYouResponse+ParseObject.m in Sources */,
+				ADF472621B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.m in Sources */,
 				AD79BA581B20B78A00E8DF61 /* SecondViewController.m in Sources */,
 				AD79BA521B20B78A00E8DF61 /* AppDelegate.m in Sources */,
+				AD0E21241B2C057600B7A06B /* HRServerManager.m in Sources */,
+				AD0E21141B28ABC000B7A06B /* HRServerConstants.m in Sources */,
+				AD0E20F31B25959A00B7A06B /* HRHomeViewController.m in Sources */,
+				AD276BE91B34313300B5E898 /* HRLocationVisits.m in Sources */,
+				ADF4725F1B2EED5700B1A039 /* HRReverseGeocoder.m in Sources */,
 				AD79BA551B20B78A00E8DF61 /* FirstViewController.m in Sources */,
+				AD0E20F81B25E9A700B7A06B /* HRWhereAreYouTVC.m in Sources */,
 				AD79BA4F1B20B78A00E8DF61 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD79BA611B20B78B00E8DF61 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AD79BA6C1B20B78B00E8DF61 /* HeroTests.m in Sources */,
+				AD0E20FF1B271E4C00B7A06B /* HRLocationDetailsVC.m in Sources */,
+				AD0E21181B28ADA700B7A06B /* NSArray+ParseConversions.m in Sources */,
+				AD0E21281B2C852B00B7A06B /* HRWhereAreYouResponse.m in Sources */,
+				AD0E210D1B28A6F300B7A06B /* HRGroupMemberModel.m in Sources */,
+				AD0E21101B28A7DA00B7A06B /* HRParseServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AD79BA671B20B78B00E8DF61 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AD79BA481B20B78A00E8DF61 /* Hero */;
-			targetProxy = AD79BA661B20B78B00E8DF61 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AD79BA591B20B78A00E8DF61 /* Main.storyboard */ = {
@@ -355,9 +546,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Hero",
+					"/Users/totaramudu/Downloads/parse-library-1-2",
+				);
 				INFOPLIST_FILE = Hero/Info.plist;
+				LD_MAP_FILE_PATH = "$(TARGET_TEMP_DIR)-LinkMap-$(CURRENT_ARCH).txt";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hero;
 			};
 			name = Debug;
 		};
@@ -365,43 +563,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Hero",
+					"/Users/totaramudu/Downloads/parse-library-1-2",
+				);
 				INFOPLIST_FILE = Hero/Info.plist;
+				LD_MAP_FILE_PATH = "$(TARGET_TEMP_DIR)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		AD79BA731B20B78B00E8DF61 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HeroTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hero.app/Hero";
-			};
-			name = Debug;
-		};
-		AD79BA741B20B78B00E8DF61 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HeroTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hero.app/Hero";
+				PRODUCT_NAME = Hero;
 			};
 			name = Release;
 		};
@@ -424,14 +595,7 @@
 				AD79BA711B20B78B00E8DF61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		AD79BA721B20B78B00E8DF61 /* Build configuration list for PBXNativeTarget "HeroTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AD79BA731B20B78B00E8DF61 /* Debug */,
-				AD79BA741B20B78B00E8DF61 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

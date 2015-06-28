@@ -7,9 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "HRServer.h"
+#import "HRHomeNavigation.h"
+#import "HRLocationDetailsVC.h"
+#import "HRLocationVisits.h"
+#import <CoreLocation/CoreLocation.h>
+
+@import Parse;
+
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
@@ -17,7 +24,77 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Setup parse
+    [Parse setApplicationId:@"2FFZFbjK9tOdu8ZTuWLN8Oxg7FN968JK6CIGeuGO"
+                  clientKey:@"WHPXcS4QWG54RURQVMkphrns4c1kXaSudw4sq19f"];
+    
+    [self startMonitoringVisits];
+
+    UIWindow* window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = window;
+    UIViewController* rootVC = [[HRHomeNavigation sharedInstance] prepareRootNavigationController];
+    self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
+    
+    
+    // Register for PN
+    // Register for Push Notitications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
     return YES;
+}
+
+- (void)startMonitoringVisits {
+    [HRLocationVisits startMonitoringVisits];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setChannels:@[@"admin"]];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [[HRServerManager sharedInstance] didReceivePushNotification:userInfo];
+    [PFPush handlePush:userInfo];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSLog(@"didReceiveRemoteNotification %@", userInfo);
+    [[HRServerManager sharedInstance] didReceivePushNotification:userInfo];
+    [PFPush handlePush:userInfo];
+    [[HRHomeNavigation sharedInstance] showWhereAreYouResponseNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+
+//    if (![userInfo valueForKeyPath:@"aps.content-available"]) {
+//        // User notification
+//        // TODO: Check type of notification action.
+//        [[HRServerManager sharedInstance] didReceivePushNotification:userInfo];
+//        [PFPush handlePush:userInfo];
+//        [[HRHomeNavigation sharedInstance] showWhereAreYouResponseNotification:userInfo];
+//        completionHandler(UIBackgroundFetchResultNewData);
+//    } else {
+//        NSLog(@"didReceiveRemoteNotification silent notif");
+//        UILocalNotification* notif = [[UILocalNotification alloc] init];
+//        notif.alertTitle = @"Hero";
+//        notif.alertBody = @"Silent";
+//        [application scheduleLocalNotification:notif];
+//        completionHandler(UIBackgroundFetchResultNewData);
+//    }
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    NSLog(@"didReceiveLocalNotification");
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

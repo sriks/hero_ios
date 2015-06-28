@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JNf-BF-KRF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Where are you ?-->
+        <scene sceneID="2Gm-fu-Anb">
+            <objects>
+                <tableViewController storyboardIdentifier="whereareyou_tvc" clearsSelectionOnViewWillAppear="NO" id="IUs-3V-3CG" customClass="HRWhereAreYouTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="U7y-42-Y8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="S3a-bZ-1U7" imageView="x2s-PA-E3I" style="IBUITableViewCellStyleDefault" id="4hn-hL-uD8">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4hn-hL-uD8" id="yDc-z7-dUj">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S3a-bZ-1U7">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="first" id="x2s-PA-E3I">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IUs-3V-3CG" id="8Uo-9g-WFo"/>
+                            <outlet property="delegate" destination="IUs-3V-3CG" id="QmQ-Fa-KQN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Where are you ?" id="jZx-Hl-Hoi"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9l-vu-4Qk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64" y="94"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4n0-2y-Bi5">
+            <objects>
+                <navigationController id="e1r-LG-qHV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jS9-qB-C8i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="D4Q-Ny-g93" kind="relationship" relationship="rootViewController" id="cMP-Jz-vlm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SJ4-h4-Rdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-821" y="931"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="P6j-NA-6z5">
+            <objects>
+                <viewController id="D4Q-Ny-g93" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DlG-KV-7sN"/>
+                        <viewControllerLayoutGuide type="bottom" id="wTI-ul-1ho"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U3t-4o-Eiz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.59288983662968564" blue="0.54713911357721368" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="obD-3h-RXY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gs9-tG-EmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="931"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7rw-hC-hU1">
+            <objects>
+                <navigationController id="U3d-rA-HOL" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="UKC-C8-eZO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IUs-3V-3CG" kind="relationship" relationship="rootViewController" id="Pc5-kc-y1z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lMf-7J-wmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-816" y="94"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="E3y-s3-LFy">
+            <objects>
+                <splitViewController id="JNf-BF-KRF" customClass="HRHomeViewController" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="U3d-rA-HOL" kind="relationship" relationship="masterViewController" id="wgr-P3-eAu"/>
+                        <segue destination="e1r-LG-qHV" kind="relationship" relationship="detailViewController" id="Bbd-cu-svK"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5DK-tN-Z34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1636" y="424"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
+</document>

@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 
+@import Parse;
 @interface FirstViewController ()
 
 @end
@@ -24,4 +25,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onDaddyButtonClicked:(id)sender {
+    NSDictionary *data = @{
+                           @"alert":@"Where are you?",
+                           @"a": @"hr://whereareyou?from=fromobjid&target=fZhIK5O3Zf"
+                           };
+    NSArray *channels = @[@"daddy"];
+    
+    PFPush *push = [[PFPush alloc] init];
+    [push setChannels:channels];
+    [push setData:data];
+    [push sendPushInBackground];
+}
 @end
