@@ -8,6 +8,7 @@
 
 #import "HRHomeViewController.h"
 #import "HRWhereAreYouTVC.h"
+#import "HRHomeNavigation.h"
 
 @interface HRHomeViewController ()
 @property (nonatomic) UINavigationController* primaryNavigationController;
@@ -48,7 +49,6 @@
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController
 collapseSecondaryViewController:(UIViewController *)secondaryViewController
   ontoPrimaryViewController:(UIViewController *)primaryViewController {
-    primaryViewController.view.backgroundColor = [UIColor redColor];
     return YES;
 }
 

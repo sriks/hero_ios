@@ -34,6 +34,10 @@ NSString* kStoryboard = @"Home";
 }
 
 - (UIViewController*)prepareRootNavigationController {
+#ifdef TEST_SHOW_DUMMY_DETAILS
+    return [self locationDetailsVC];
+#endif
+
     if (!self.homeViewController) {
         self.storyboard = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
         self.homeViewController = (HRHomeViewController*)[self.storyboard instantiateInitialViewController];
@@ -74,7 +78,6 @@ NSString* kStoryboard = @"Home";
     // TODO: Use protocol.
     HRLocationDetailsVC* details = (HRLocationDetailsVC*)[sb instantiateInitialViewController];
     return details;
-
 }
 
 - (UINavigationController*)showInActiveNavigationController:(UIViewController*)vc {

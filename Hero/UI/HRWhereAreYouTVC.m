@@ -10,7 +10,7 @@
 #import "HRWhereAreYouTVC.h"
 #import "HRServer.h"
 #import "HRHomeNavigation.h"
-
+#import "DCCircledLetterView.h"
 const int HELP_LABEL_HEIGHT = 70;
 
 @interface HRWhereAreYouTVC ()

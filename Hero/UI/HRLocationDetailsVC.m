@@ -9,11 +9,11 @@
 #import "HRLocationDetailsVC.h"
 #import "HRWhereAreYouResponseTVC.h"
 #import "HRServer.h"
-@import MapKit;
+#import "HRDetailsMapViewController.h"
 
 @interface HRLocationDetailsVC ()
-@property (nonatomic, weak) IBOutlet MKMapView* mapView;
 @property (nonatomic) HRWhereAreYouResponseTVC* responseTVC;
+@property (nonatomic, weak) HRDetailsMapViewController* mapController;
 @property (nonatomic, copy) NSString* reqId;
 @end
 
@@ -31,6 +31,7 @@
         [self configureWithResponse:self.response];
     }
     
+    self.mapController.groupMember = self.groupMember;
     [self.responseTVC configureWithMember:self.groupMember];
     self.title = self.groupMember.name;
 }
@@ -42,20 +43,20 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
     if ([segue.identifier isEqualToString:@"whereareyou_response"]) {
         self.responseTVC = segue.destinationViewController;
+    } else if([segue.identifier isEqualToString:@"map_controller"]) {
+        self.mapController = segue.destinationViewController;
     }
 }
 
 #pragma mark - Private
 
 - (void)sendWhereAreYouRequestToMember:(HRGroupMemberModel*)member {
+#ifndef TEST_SHOW_DUMMY_DETAILS
     self.reqId = [[HRServerManager sharedInstance] sendWhereAreYouRequestTo:member];
+#endif
 }
 
 - (void)didReceiveWhereAreYouResponse:(NSNotification*)notification {
@@ -70,15 +71,10 @@
 }
 
 - (void)configureWithResponse:(HRWhereAreYouResponse*)response {
-    CLLocation* loc = response.location;
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance (
-                                                                    loc.coordinate,
-                                                                    500, 500);
-    [self.mapView setRegion:region animated:YES];
-    MKPointAnnotation* annotation = [[MKPointAnnotation alloc] init];
-    annotation.coordinate = loc.coordinate;
-    [self.mapView addAnnotation:annotation];
+    // Update map
+    [self.mapController configure:response.location];
     
+    // Update address
     [HRReverseGeocoder reverseGeocode:response.location withRetries:1 completionHandler:^(NSString *formattedAddress) {
         self.response.formattedAddress = formattedAddress;
         [self.responseTVC configureWithResponse:self.response];

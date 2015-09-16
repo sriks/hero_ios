@@ -44,6 +44,8 @@
 		AD79BA8C1B20CC7100E8DF61 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA8B1B20CC7100E8DF61 /* libz.dylib */; };
 		AD79BA8E1B20CC7900E8DF61 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA8D1B20CC7900E8DF61 /* libsqlite3.dylib */; };
 		AD79BA901B20CCF500E8DF61 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79BA8F1B20CCF500E8DF61 /* Bolts.framework */; };
+		AD9894111B467D2B009BCDBF /* DCCircledLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9894101B467D2B009BCDBF /* DCCircledLetter.m */; };
+		AD9894141B469C67009BCDBF /* HRDetailsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9894131B469C67009BCDBF /* HRDetailsMapViewController.m */; };
 		ADF4725F1B2EED5700B1A039 /* HRReverseGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF4725E1B2EED5700B1A039 /* HRReverseGeocoder.m */; };
 		ADF472621B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF472611B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.m */; };
 /* End PBXBuildFile section */
@@ -108,6 +110,11 @@
 		AD79BA8B1B20CC7100E8DF61 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AD79BA8D1B20CC7900E8DF61 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AD79BA8F1B20CCF500E8DF61 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../../Downloads/parse-library-1-2/Bolts.framework"; sourceTree = "<group>"; };
+		AD98940F1B467D2B009BCDBF /* DCCircledLetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCircledLetterView.h; sourceTree = "<group>"; };
+		AD9894101B467D2B009BCDBF /* DCCircledLetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCircledLetter.m; sourceTree = "<group>"; };
+		AD9894121B469C67009BCDBF /* HRDetailsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRDetailsMapViewController.h; sourceTree = "<group>"; };
+		AD9894131B469C67009BCDBF /* HRDetailsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRDetailsMapViewController.m; sourceTree = "<group>"; };
+		AD9894151B46AD5B009BCDBF /* Hero.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hero.pch; sourceTree = "<group>"; };
 		ADF4725D1B2EED5700B1A039 /* HRReverseGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRReverseGeocoder.h; sourceTree = "<group>"; };
 		ADF4725E1B2EED5700B1A039 /* HRReverseGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRReverseGeocoder.m; sourceTree = "<group>"; };
 		ADF472601B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRWhereAreYouResponseTVC.h; sourceTree = "<group>"; };
@@ -154,6 +161,7 @@
 		AD0E20ED1B25950F00B7A06B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AD9894081B466291009BCDBF /* External */,
 				AD0E212E1B2DB96700B7A06B /* Navigation */,
 				AD0E20F01B25953C00B7A06B /* ViewControllers */,
 				AD0E20EA1B25940A00B7A06B /* Storyboards */,
@@ -172,6 +180,8 @@
 				AD0E20FE1B271E4C00B7A06B /* HRLocationDetailsVC.m */,
 				ADF472601B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.h */,
 				ADF472611B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.m */,
+				AD9894121B469C67009BCDBF /* HRDetailsMapViewController.h */,
+				AD9894131B469C67009BCDBF /* HRDetailsMapViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -308,6 +318,7 @@
 			children = (
 				AD79BA4D1B20B78A00E8DF61 /* Info.plist */,
 				AD79BA4E1B20B78A00E8DF61 /* main.m */,
+				AD9894151B46AD5B009BCDBF /* Hero.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -327,6 +338,15 @@
 				AD79BA6A1B20B78B00E8DF61 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD9894081B466291009BCDBF /* External */ = {
+			isa = PBXGroup;
+			children = (
+				AD98940F1B467D2B009BCDBF /* DCCircledLetterView.h */,
+				AD9894101B467D2B009BCDBF /* DCCircledLetter.m */,
+			);
+			name = External;
 			sourceTree = "<group>";
 		};
 		ADF4725C1B2EED2A00B1A039 /* ReverseGeocoder */ = {
@@ -422,6 +442,7 @@
 				ADF472621B2F0C8700B1A039 /* HRWhereAreYouResponseTVC.m in Sources */,
 				AD79BA581B20B78A00E8DF61 /* SecondViewController.m in Sources */,
 				AD79BA521B20B78A00E8DF61 /* AppDelegate.m in Sources */,
+				AD9894141B469C67009BCDBF /* HRDetailsMapViewController.m in Sources */,
 				AD0E21241B2C057600B7A06B /* HRServerManager.m in Sources */,
 				AD0E21141B28ABC000B7A06B /* HRServerConstants.m in Sources */,
 				AD0E20F31B25959A00B7A06B /* HRHomeViewController.m in Sources */,
@@ -429,6 +450,7 @@
 				ADF4725F1B2EED5700B1A039 /* HRReverseGeocoder.m in Sources */,
 				AD79BA551B20B78A00E8DF61 /* FirstViewController.m in Sources */,
 				AD0E20F81B25E9A700B7A06B /* HRWhereAreYouTVC.m in Sources */,
+				AD9894111B467D2B009BCDBF /* DCCircledLetter.m in Sources */,
 				AD79BA4F1B20B78A00E8DF61 /* main.m in Sources */,
 				AD0E20FF1B271E4C00B7A06B /* HRLocationDetailsVC.m in Sources */,
 				AD0E21181B28ADA700B7A06B /* NSArray+ParseConversions.m in Sources */,
@@ -552,6 +574,8 @@
 					"$(PROJECT_DIR)/Hero",
 					"/Users/totaramudu/Downloads/parse-library-1-2",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Hero/Hero.pch;
 				INFOPLIST_FILE = Hero/Info.plist;
 				LD_MAP_FILE_PATH = "$(TARGET_TEMP_DIR)-LinkMap-$(CURRENT_ARCH).txt";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -569,6 +593,8 @@
 					"$(PROJECT_DIR)/Hero",
 					"/Users/totaramudu/Downloads/parse-library-1-2",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Hero/Hero.pch;
 				INFOPLIST_FILE = Hero/Info.plist;
 				LD_MAP_FILE_PATH = "$(TARGET_TEMP_DIR)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
