@@ -8,10 +8,18 @@
 
 @import CoreLocation;
 #import "HRReverseGeocoder.h"
+#import "HRGoogleGeocoder.h"
 
-typedef void(^HRReverseGeocodeCompletionBlock)(NSString* formattedAddress);
+static HRGoogleGeocoder* sGoogle;
 
 @implementation HRReverseGeocoder
+
++ (id<HRGeocoderProtocol>)geocoder {
+    if (!sGoogle) {
+        sGoogle = [[HRGoogleGeocoder alloc] init];
+    }
+    return sGoogle;
+}
 
 + (void)reverseGeocode:(CLLocation*)location
            withRetries:(int)retries

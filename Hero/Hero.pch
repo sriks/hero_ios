@@ -17,7 +17,7 @@
 /*!
  Launches details screen as the window root. 
  **/
-#define TEST_SHOW_DUMMY_DETAILS
+//#define TEST_SHOW_DUMMY_DETAILS
 
 #endif
 

@@ -11,10 +11,14 @@
 typedef void(^HRReverseGeocodeCompletionBlock)(NSString* formattedAddress);
 
 @class CLLocation;
-@interface HRReverseGeocoder : NSObject
-
-+ (void)reverseGeocode:(CLLocation*)location
+@protocol HRGeocoderProtocol <NSObject>
+- (void)reverseGeocode:(CLLocation*)location
            withRetries:(int)retries
      completionHandler:(HRReverseGeocodeCompletionBlock)block;
+@end
+
+@interface HRReverseGeocoder : NSObject
+
++ (id<HRGeocoderProtocol>)geocoder;
 
 @end

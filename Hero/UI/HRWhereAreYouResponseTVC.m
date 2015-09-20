@@ -66,17 +66,17 @@ const int SECTION_ADDRESS           =   1;
 
 // UITableViewDataSource not required since we are using static cells.
 
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == SECTION_MEMBER_NAME) {
-        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"userinfo"];
-        return cell;
-    } else if (indexPath.section == SECTION_ADDRESS) {
-        UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"address"];
-        cell.textLabel.text = @"My";
-        return cell;
-    }
-    return nil;
-}
+//- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (indexPath.section == SECTION_MEMBER_NAME) {
+//        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"userinfo"];
+//        return cell;
+//    } else if (indexPath.section == SECTION_ADDRESS) {
+//        UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"address"];
+//        cell.textLabel.text = @"My";
+//        return cell;
+//    }
+//    return nil;
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == SECTION_ADDRESS) {

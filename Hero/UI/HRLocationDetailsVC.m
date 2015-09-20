@@ -75,7 +75,7 @@
     [self.mapController configure:response.location];
     
     // Update address
-    [HRReverseGeocoder reverseGeocode:response.location withRetries:1 completionHandler:^(NSString *formattedAddress) {
+    [[HRReverseGeocoder geocoder] reverseGeocode:response.location withRetries:1 completionHandler:^(NSString *formattedAddress) {
         self.response.formattedAddress = formattedAddress;
         [self.responseTVC configureWithResponse:self.response];
     }];
